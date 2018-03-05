@@ -3,36 +3,16 @@
   with_items: "{{ packages }}"
   become: True
 
-- name: Install util packages for arch family
-  pacman: name={{ item }} state=present
-  with_items: "{{ packages_arch }}"
-  become: True
-  when: ansible_pkg_mgr == "pacman"
-
-- name: Install util packages for debian family
-  apt: name={{ item }} state=present
-  with_items: "{{ packages_debian }}"
-  become: True
-  when: ansible_pkg_mgr == "apt"
-
-- name: Create ansible log file
-  copy:
-    dest: /var/log/ansible.log
-    content: ""
-    force: no
-    mode: 0666
-  become: True
-
-- name: Set up ansible logging
-  lineinfile:
-    dest: "/etc/ansible/ansible.cfg"
-    regexp: '^#?log_path'
-    line: 'log_path = /var/log/ansible.log'
-  become: True
-
 - name: Activate undistract-me
   lineinfile:
     dest: "~/.bashrc"
     regexp: ".*undistract-me\\.sh.*"
     line: "source /etc/profile.d/undistract-me.sh"
+  become: false
+
+- name: Alias ls -lhA
+  lineinfile:
+    dest: "~/.bashrc"
+    regexp: ".*ll=.*"
+    line: "alias ll='ls -lhA'"
   become: false

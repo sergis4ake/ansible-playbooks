@@ -2,50 +2,45 @@
 
 packages:
   - apg  #random password generator
-  - at
-  - bmon
+#  - at
+#  - bmon
   - build-essential
-  - byobu #For remove-old-kernels
+#  - byobu #For remove-old-kernels
   - cloc  #Count lines of code
   - git
   - git-extras
   - gnupg
   - gparted
   - htop
-  - incron
-  - iotop
-  - lftp
-  - lnav
+#  - incron
+#  - iotop
+#  - lftp
+#  - lnav
   - most
   - mtr
-  - multitail
-  - ncdu 
+#  - multitail
+#  - ncdu 
   - openssl
-  - pandoc
-  - preload
-  - pv
-  - pydf
-  - qalc
-  - renameutils
-  - ranger
+#  - pandoc
+#  - preload
+#  - pv
+#  - pydf
+#  - qalc
+#  - renameutils
+#  - ranger
   - rsync
-  - screenfetch
-  - task-spooler
-  - texlive-fonts-recommended #for pandoc to pdf
-  - tig
-  - tlp
-  - tlp-rdw
+#  - screenfetch
+#  - task-spooler
+#  - texlive-fonts-recommended #for pandoc to pdf
+#  - tig
+#  - tlp
+#  - tlp-rdw
   - tmux
   - tree
   - undistract-me
-  - xclip
-
-packages_arch:
-  - openssh
-  - cronie
-
-packages_debian:
-  - anacron
+#  - xclip
+#  - anacron
   - aptitude 
   - openssh-client
   - openssh-server
+  - google-chrome-stable

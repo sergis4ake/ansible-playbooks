@@ -1,0 +1,8 @@
+---
+
+packages:
+  - atom
+  - vim
+
+ppas:
+  - 'ppa:webupd8team/atom'

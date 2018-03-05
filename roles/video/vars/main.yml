@@ -3,13 +3,13 @@ ppas:
   - "ppa:obsproject/obs-studio"
 
 packages:
-  - blender
-  - ffmpeg
+#  - blender
+#  - ffmpeg
   - obs-studio  # if remove this, remove also his ppa
-  - php #for pulverize repository
-  - smplayer
+#  - php #for pulverize repository
+#  - smplayer
   - vlc
-
-scripts:
-  - extractmp3.sh
-  - trec2mp4.sh
+#
+#scripts:
+#  - extractmp3.sh
+#  - trec2mp4.sh

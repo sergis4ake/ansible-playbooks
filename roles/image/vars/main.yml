@@ -1,6 +1,6 @@
 ---
 packages:
-  - equalx
+#  - equalx
   - inkscape
   - gimp
   - gimp-resynthesizer

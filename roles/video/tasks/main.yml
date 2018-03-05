@@ -13,6 +13,7 @@
     codename="sonya"
   with_items: "{{ ppas }}"
   become: True
+
 - name: Install ppas
   apt_repository:
     repo={{ item }}
@@ -28,22 +29,22 @@
   with_items: "{{ packages }}"
   become: True
 
-- name: Install scripts
-  file: 
-    src="{{ role_path }}/files/{{ item }}"
-    dest="/usr/local/bin/{{ item }}"
-    state=link
-  with_items: "{{ scripts }}"
-  become: True
-
-- name: Clone pulverize repo
-  git: 
-    repo="https://github.com/sciactive/pulverize"
-    dest="/var/repos/pulverize"
-    
-- name: Link pulverize.php into /usr/local/bin
-  file:
-    src="/var/repos/pulverize/pulverize.php"
-    dest="/usr/local/bin/pulverize.php"
-    state="link"
-  become: True
+#- name: Install scripts
+#  file: 
+#    src="{{ role_path }}/files/{{ item }}"
+#    dest="/usr/local/bin/{{ item }}"
+#    state=link
+#  with_items: "{{ scripts }}"
+#  become: True
+#
+#- name: Clone pulverize repo
+#  git: 
+#    repo="https://github.com/sciactive/pulverize"
+#    dest="/var/repos/pulverize"
+#    
+#- name: Link pulverize.php into /usr/local/bin
+#  file:
+#    src="/var/repos/pulverize/pulverize.php"
+#    dest="/usr/local/bin/pulverize.php"
+#    state="link"
+#  become: True

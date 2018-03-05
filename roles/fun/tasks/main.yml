@@ -17,3 +17,17 @@
     state: present
   with_items: "{{ packages }}"
   become: True
+
+- name: Activate toilet
+  lineinfile:
+    dest: "~/.bashrc"
+    regexp: ".*toilet.*"
+    line: "toilet --metal \_Sergiu_/"
+  become: false
+
+- name: Activate fortune
+  lineinfile:
+    dest: "~/.bashrc"
+    regexp: ".*fortune.*"
+    line: "fortune"
+  become: false
