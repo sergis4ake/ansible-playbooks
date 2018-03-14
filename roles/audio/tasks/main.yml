@@ -3,7 +3,7 @@
 
 
 - name: Add respository
-  apt_repository: "deb http://repository.spotify.com stable non-free"
+  apt_repository: repo="deb http://repository.spotify.com stable non-free"
     
 - name: Update cache
   apt:
