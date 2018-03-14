@@ -1,7 +1,7 @@
 - name: Add Apt Keys
   apt_key: keyserver=hkp://keyserver.ubuntu.com:80 id=0DF731E45CE24F27EEEB1450EFDC8610341D9410 state=present
 
-- name: Add spotify respository
+- name: Add respository
   apt_repository: "deb http://repository.spotify.com stable non-free"
     
 - name: Update cache
