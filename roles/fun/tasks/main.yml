@@ -22,7 +22,7 @@
   lineinfile:
     dest: "~/.bashrc"
     regexp: ".*toilet.*"
-    line: "toilet --metal \_Sergiu_/"
+    line: "toilet --metal '\_Sergiu_/'"
   become: false
 
 - name: Activate fortune

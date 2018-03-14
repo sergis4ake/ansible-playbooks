@@ -1,16 +1,3 @@
-- name: Add Apt Keys
-  apt_key:
-    keyserver: keyserver.ubuntu.com
-    id: 0DF731E45CE24F27EEEB1450EFDC8610341D9410
-
-- name: Add respository
-  apt_repository: repo="deb http://repository.spotify.com stable non-free"
-    
-- name: Update cache
-  apt:
-    update_cache: True
-  become: True
-
 - name: Install audio packages
   package: name={{ item }} state=present
   with_items: "{{ packages }}"

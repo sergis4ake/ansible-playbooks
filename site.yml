@@ -9,3 +9,4 @@
     - { role: audio, tags: ['desktop'] }
     - { role: video, tags: ['desktop'] }
     - { role: clear, tags: ['desktop'] }
+    - { role: editor, tags: ['desktop'] }
