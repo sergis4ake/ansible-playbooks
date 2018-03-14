@@ -3,6 +3,8 @@
 packages:
   - atom
   - vim
+  - gedit
+  - nano
 
 ppas:
   - 'ppa:webupd8team/atom'
