@@ -15,8 +15,8 @@ packages:
   - python3-dev
   - python3-setuptools
   - python3-pip
-#  - python3-tk
-#  - gfortran
+  - python3-tk
+  - gfortran
 
 pip_packages:
   - pip
@@ -32,11 +32,8 @@ pip_packages:
   - beautifulsoup4
   - xonsh
   - textblob
-  - time
-  - os
-  - re
   - wordcloud
-  - spyder3
+  - spyder
 
 #  - gitsome
 #  - psycopg2-binary

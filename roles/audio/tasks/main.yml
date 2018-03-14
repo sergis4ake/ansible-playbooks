@@ -1,13 +1,6 @@
-- name: Spotify package list
-  copy:
-    content: "deb http://repository.spotify.com stable non-free"
-    dest: /etc/apt/sources.list.d/spotify.list
-    force: no
-    group: sys
-    owner: root
-    mode: 0644
-  become: True
-
+- name: Add spotify respository
+  apt_repository: "deb http://repository.spotify.com stable non-free"
+    
 - name: Update cache
   apt:
     update_cache: True
@@ -17,4 +10,3 @@
   package: name={{ item }} state=present
   with_items: "{{ packages }}"
   become: True
-
