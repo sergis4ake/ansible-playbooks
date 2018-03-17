@@ -12,6 +12,8 @@ Atom packages: apm install [package-name]
 	- hydrogen
 Atom syntax-theme:
 	- monokai
+	- atom-material-ui
+	- atom-material-syntax
 
 Apt packages: apt install [package-name]
 	- curl -sL https://deb.nodesource.com/setup_9.x
