@@ -3,10 +3,11 @@
   hosts: localhost
   roles: 
     - { role: utils, tags: ['desktop'] }
-    - { role: python, tags: ['desktop','test'] }
+    - { role: python, tags: ['desktop', 'test'] }
     - { role: fun, tags: ['desktop'] }
     - { role: image, tags: ['desktop'] }
     - { role: audio, tags: ['desktop'] }
     - { role: video, tags: ['desktop'] }
-    - { role: clear, tags: ['desktop'] }
     - { role: editor, tags: ['desktop'] }
+    - { role: virtualbox, tags: ['desktop', 'download']}
+    - { role: java, tags: ['desktop']}

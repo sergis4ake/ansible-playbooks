@@ -1,0 +1,9 @@
+---
+
+url: "https://download.virtualbox.org/virtualbox/5.2.20/virtualbox-5.2_5.2.20-125813~Ubuntu~bionic_amd64.deb"
+file: "/tmp/virtualbox.deb"
+
+ubuntu_distrib: "bionic"
+
+packages:
+  - virtualbox-5.2

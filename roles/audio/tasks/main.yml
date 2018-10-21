@@ -1,4 +1,9 @@
-- name: Install audio packages
+- name: Install apt audio packages
   package: name={{ item }} state=present
   with_items: "{{ packages }}"
+  become: True
+
+- name: Install snap audio packages
+  shell: snap install "{{ item }}"
+  with_items: "{{ snap_packages }}"
   become: True

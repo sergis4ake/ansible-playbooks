@@ -1,25 +1,21 @@
-# ansible-playbooks
-My ansible playbooks for desktop and servers.
+# My ansible-playbooks
+My ansible playbooks for desktop.
 
-Atom packages: apm install [package-name]
-	- language-matlab
-	- language-latex
-	- language-ansible
-	- language-gnuplot-atom
-	- language-ada
-	- platformio-ide-terminal
-	- script
-	- hydrogen
-Atom syntax-theme:
-	- monokai
-	- atom-material-ui
-	- atom-material-syntax
+## 1. Install ansible
+> sudo apt-get update && sudo apt-get install ansible
 
-Apt packages: apt install [package-name]
-	- curl -sL https://deb.nodesource.com/setup_9.x
-	- sudo apt-get install -y nodejs
+## 2. Execute ansible playbook
+### Execute privileges
+> sudo chmod +x test.sh test_all.sh desktop.sh
 
-Npm packages: npm install [--global | -g] [--save-dev] [package-name]
-	- coffeescript
-	- ts-node
-	- typescript
+### Testing python packages
+> ./test.sh
+
+### Install all
+> ./desktop.sh
+
+## 3. Notes
+The follow apps from roles are donwloaded from a static URL without state. Please, **check the latest version** and modify these files.
+ 1. **vscode** and **extensions** in editor role.
+ 2. **openjdk-java** in java role.
+ 3. **virtual-box** in virtualbox role.

@@ -1,9 +1,10 @@
-- name: Ensure ppas are installed
-  apt_repository:
-    repo: "{{ item }}"
-    state: "present"
-    codename: "xenial"
-  with_items: "{{ ppas }}"
+- name: Download vscode package
+  get_url:
+    url: "{{ vscode_url }}"
+    dest: "{{ vscode_file }}"
+
+- name: Add vscode package
+  shell: dpkg -i "{{ vscode_file }}"
   become: True
 
 - name: Update cache
@@ -16,3 +17,12 @@
   with_items: "{{ packages }}"
   become: True
 
+- name: Cleanup
+  file:
+    path: "{{ vscode_file }}"
+    state: absent
+
+- name: Install vscode extensions
+  shell: code --install-extension "{{ item }}"
+  with_items: "{{ vscode_extensions }}"
+  when: vscode_enable_extensions

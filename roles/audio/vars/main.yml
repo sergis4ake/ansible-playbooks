@@ -1,5 +1,6 @@
 ---
 packages:
   - cmus
-  - audacity
-#  - spotify-client
+
+snap_packages:
+  - spotify

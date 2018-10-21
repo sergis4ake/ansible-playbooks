@@ -2,7 +2,7 @@
   apt_repository:
     repo: "{{ item }}"
     state: "present"
-    codename: "xenial"
+    codename: "bionic"
   with_items: "{{ ppas }}"
   become: True
 
@@ -22,7 +22,7 @@
   lineinfile:
     dest: "~/.bashrc"
     regexp: ".*toilet.*"
-    line: "toilet --metal '\_Sergiu_/'"
+    line: "toilet --metal '\\_Sergiu_/'"
   become: false
 
 - name: Activate fortune

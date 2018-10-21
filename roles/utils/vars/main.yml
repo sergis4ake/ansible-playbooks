@@ -1,26 +1,38 @@
 ---
 
 packages:
-  - apg  #random password generator
-#  - at
-#  - bmon
+  - apg                   #Random password generator.
+  - aptitude
+  - apt-transport-https
+  - at
   - build-essential
-#  - byobu #For remove-old-kernels
-  - cloc  #Count lines of code
+  - calibre
+  - cloc                  #Count lines of code.
+  - curl
+  - gawk
   - git
   - git-extras
   - gnupg
   - gparted
+  - google-chrome-stable
+  - hping3
   - htop
+  - most
+  - mtr
+  - rsync
+  - smartgit
+  - tmux
+  - tree
+  - undistract-me         #Notifies you when long-running terminal commands complete.
+
+#  - bmon
+#  - byobu #For remove-old-kernels
 #  - incron
 #  - iotop
 #  - lftp
 #  - lnav
-  - most
-  - mtr
 #  - multitail
-#  - ncdu 
-  - openssl
+#  - ncdu
 #  - pandoc
 #  - preload
 #  - pv
@@ -28,19 +40,15 @@ packages:
 #  - qalc
 #  - renameutils
 #  - ranger
-  - rsync
 #  - screenfetch
 #  - task-spooler
 #  - texlive-fonts-recommended #for pandoc to pdf
 #  - tig
 #  - tlp
 #  - tlp-rdw
-  - tmux
-  - tree
-  - undistract-me
 #  - xclip
 #  - anacron
-  - aptitude 
-  - openssh-client
-  - openssh-server
-  - google-chrome-stable
+#  - openssl
+#  - openssh-client
+#  - openssh-server
+

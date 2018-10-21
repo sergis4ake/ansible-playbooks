@@ -1,0 +1,8 @@
+---
+# JDK version options include:
+#   - java
+#   - openjdk-11-jdk
+java_packages:
+  - openjdk-11-jdk
+
+java_home: "$HOME/.java/jdk-10.0.2"
