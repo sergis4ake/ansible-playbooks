@@ -11,3 +11,4 @@
     - { role: editor, tags: ['desktop'] }
     - { role: virtualbox, tags: ['desktop', 'download']}
     - { role: java, tags: ['desktop']}
+    - { role: localhost, tags: ['localhost']}
