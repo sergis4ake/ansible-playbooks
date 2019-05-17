@@ -9,6 +9,8 @@ packages:
   - calibre
   - cloc                  #Count lines of code.
   - curl
+  - docker.io
+  - entr
   - gawk
   - git
   - git-extras
@@ -17,6 +19,7 @@ packages:
   - google-chrome-stable
   - hping3
   - htop
+  - lftp
   - most
   - mtr
   - rsync
@@ -29,7 +32,6 @@ packages:
 #  - byobu #For remove-old-kernels
 #  - incron
 #  - iotop
-#  - lftp
 #  - lnav
 #  - multitail
 #  - ncdu
