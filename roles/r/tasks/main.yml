@@ -1,0 +1,37 @@
+# R-base
+- name: Add public key to apt Rbase
+  apt_key:
+  keyserver: "{{ rbase_keyserver }}"
+  id: "{{ rbase_id }}"
+  state: present
+
+- name: Add repo Rbase
+  apt_repository:
+  repo: "{{ rbase_repo }}"
+  state: present
+
+
+# RStudio
+- name: Download Rstudio package
+  get_url:
+    url: "{{ rstudio_url }}"
+    dest: "/tmp/{{ rstudio_file }}"
+
+- name: Add Rstudio package
+  shell: dpkg -i "/tmp/{{ rstudio_file }}"
+  become: True
+
+- name: Update cache
+  apt:
+    update_cache: True
+  become: True
+
+- name: Install editor packages
+  package: name={{ item }} state=present
+  with_items: "{{ packages }}"
+  become: True
+
+- name: Cleanup
+  file:
+    path: "/tmp/{{ rstudio_file }}"
+    state: absent
