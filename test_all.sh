@@ -1,3 +1,3 @@
 #!/bin/bash
 
-time ansible-playbook -v -c local site.yml -K --become-method=sudo
+time ansible-playbook -vvvv -c local site.yml -K --become-method=sudo -i hosts --extra-vars "manager"
