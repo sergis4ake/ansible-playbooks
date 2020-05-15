@@ -1,12 +1,12 @@
 ---
 
-ppas:
-  - ppa:ytvwld/asciiquarium
+#ppas:
+#  - ppa:ytvwld/asciiquarium
 
 packages:
   - boxes
   - cmatrix
   - cowsay
   - toilet
-  - asciiquarium
+  #- asciiquarium
   - fortune

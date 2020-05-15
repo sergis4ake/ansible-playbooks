@@ -1,17 +1,4 @@
-- name: Install ppas
-  apt_repository:
-    repo: "{{ item }}"
-    state: "present"
-  with_items: "{{ ppas }}"
-  become: True
-
-- name: Remove unnecessary ppas
-  apt_repository:
-    repo: "{{ item }}"
-    state: "absent"
-    codename: "sylvia"
-  with_items: "{{ ppas }}"
-  become: True
+---
 
 - name: Update cache
   apt:

@@ -1,6 +1,6 @@
 ---
-ppas:
-  - "ppa:obsproject/obs-studio"
+# ppas:
+#   - "ppa:obsproject/obs-studio"
 
 packages:
   - ffmpeg

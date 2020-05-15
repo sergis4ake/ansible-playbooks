@@ -1,10 +1,10 @@
 - name: Download vscode package
   get_url:
     url: "{{ vscode_url }}"
-    dest: "{{ vscode_file }}"
+    dest: "/tmp/{{ vscode_file }}"
 
 - name: Add vscode package
-  shell: dpkg -i "{{ vscode_file }}"
+  shell: dpkg -i "/tmp/{{ vscode_file }}"
   become: True
 
 - name: Update cache
@@ -19,7 +19,7 @@
 
 - name: Cleanup
   file:
-    path: "{{ vscode_file }}"
+    path: "/tmp/{{ vscode_file }}"
     state: absent
 
 - name: Install vscode extensions

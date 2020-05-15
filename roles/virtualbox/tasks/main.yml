@@ -1,28 +1,36 @@
+- name: Download pub key to add in apt for Virtualbox
+  apt_key:
+    url: "{{ item }}"
+    state: present
+  with_items: "{{ url_keys }}"
+  become: true
 
-#- name: add VirtualBox repo signing key
-#  apt_key: 
-#    state: absent
-#    url: http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc
-#  become: True
+- name: Check if file virtualbox.list exists or not
+  stat: 
+    path: "{{ virtualbox_apt_file }}"
+  register: status
+  become: true
 
-- name: Download Virtualbox deb file.
-  get_url:
-    url: "{{ url }}"
-    dest: "{{ file }}"
+- name: Add virtualbox.list to apt
+  file:
+    path: "{{ virtualbox_apt_file }}"
+    state: touch
+  when: status.stat.exists == false
+  become: true
 
-- name: Add Virtualbox package.
-  shell: dpkg -i "{{ file }}"
-  become: True
+- name: Add line with repo in virtualbox.list
+  lineinfile:
+    path: "{{ virtualbox_apt_file }}"
+    regexp: '^deb [arch=amd64] https://download.virtualbox'
+    line: "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian {{ distrib }} contrib"
+  become: true
 
-- name: Update cache
+- name: Update cache apt
   apt:
     update_cache: True
   become: True
 
-- name: Install Virtualbox package.
-  apt:
-    name: "{{ item }}"
-    state: "present"
+- name: Install apt virtualbox packages
+  package: name={{ item }} state=present
   with_items: "{{ packages }}"
-  become: true
-  
+  become: True

@@ -1,6 +1,11 @@
 ---
-packages:
-  - cmus
 
-snap_packages:
-  - spotify
+url: 'https://dl.discordapp.net/apps/linux/0.0.10/discord-0.0.10.deb'
+file: discord.deb
+
+pubkey_spotify: 'https://download.spotify.com/debian/pubkey.gpg'
+repo_spotify: 'deb http://repository.spotify.com stable non-free'
+
+packages:
+  - spotify-client
+  - discord

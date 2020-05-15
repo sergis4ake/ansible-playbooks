@@ -16,15 +16,11 @@ apt_packages:
   - python3-setuptools
   - python3-pip
   - python3-tk
-  - gfortran
 
 pip_packages:
   - pip
   - pandas
   - numpy
-  - matplotlib
-  - sympy
-  - scipy
   - requests
 #  - scikit-learn
 #  - seaborn
@@ -34,7 +30,6 @@ pip_packages:
 #  - textblob
 #  - wordcloud
 #  - spyder
-
 #  - gitsome
 #  - psycopg2-binary
 #  - pgcli

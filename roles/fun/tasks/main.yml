@@ -1,10 +1,10 @@
-- name: Ensure ppas are installed
-  apt_repository:
-    repo: "{{ item }}"
-    state: "present"
-    codename: "bionic"
-  with_items: "{{ ppas }}"
-  become: True
+# - name: Ensure ppas are installed
+#   apt_repository:
+#     repo: "{{ item }}"
+#     state: "present"
+#     codename: "bionic"
+#   with_items: "{{ ppas }}"
+#   become: True
 
 - name: Update cache
   apt:
@@ -20,14 +20,14 @@
 
 - name: Activate toilet
   lineinfile:
-    dest: "~/.bashrc"
+    path: "~/.bashrc"
     regexp: ".*toilet.*"
     line: "toilet --metal '\\_Sergiu_/'"
   become: false
 
 - name: Activate fortune
   lineinfile:
-    dest: "~/.bashrc"
+    path: "~/.bashrc"
     regexp: ".*fortune.*"
     line: "fortune"
   become: false

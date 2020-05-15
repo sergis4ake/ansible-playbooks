@@ -1,9 +1,41 @@
+- name: Download pub key to add in apt for Spotify
+  apt_key:
+    url: "{{ pubkey_spotify }}"
+    state: present
+  become: true
+
+- name: Add spotify repo
+  apt_repository:
+    repo: "{{ repo_spotify }}"
+    state: present
+
+- name: Update cache apt
+  apt:
+    update_cache: True
+  become: True
+
+- name: Download Discord deb file.
+  get_url:
+    url: "{{ url }}"
+    dest: "/tmp/{{ file }}"
+
+- name: Add Discord package.
+  shell: dpkg -i "/tmp/{{ file }}"
+  become: True
+
+- name: Update cache
+  apt:
+    update_cache: True
+  become: True
+
 - name: Install apt audio packages
-  package: name={{ item }} state=present
+  package: 
+    name: "{{ item }}"
+    state: present
   with_items: "{{ packages }}"
   become: True
 
-- name: Install snap audio packages
-  shell: snap install "{{ item }}"
-  with_items: "{{ snap_packages }}"
-  become: True
+- name: Cleanup
+  file:
+    path: "/tmp/{{ file }}"
+    state: absent

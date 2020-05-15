@@ -7,10 +7,9 @@ packages:
   - at
   - build-essential
   - calibre
-  - cloc                  #Count lines of code.
+  - cloc                  #Count lines of code or changed code between two files.
   - curl
-  - docker.io
-  - entr
+  - entr                  #Run command when files change.
   - gawk
   - git
   - git-extras
@@ -23,34 +22,35 @@ packages:
   - most
   - mtr
   - rsync
+  - rclone
   - smartgit
   - tmux
   - tree
   - undistract-me         #Notifies you when long-running terminal commands complete.
+  - pandoc
+  - texlive-fonts-recommended
+  - openssh-client
+  - openssl
+  - anacron
+  - xclip
+  - iotop
+  - lnav                  #Registros
+  - ncdu
+  - ranger
 
 #  - bmon
 #  - byobu #For remove-old-kernels
-#  - incron
-#  - iotop
-#  - lnav
+#  - incron # Monitor important changes in files and folders
 #  - multitail
-#  - ncdu
-#  - pandoc
 #  - preload
 #  - pv
 #  - pydf
 #  - qalc
 #  - renameutils
-#  - ranger
 #  - screenfetch
 #  - task-spooler
-#  - texlive-fonts-recommended #for pandoc to pdf
 #  - tig
 #  - tlp
 #  - tlp-rdw
-#  - xclip
-#  - anacron
-#  - openssl
-#  - openssh-client
 #  - openssh-server
 
