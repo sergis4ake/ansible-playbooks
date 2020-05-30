@@ -1,15 +1,21 @@
 # R-base
 - name: Add public key to apt Rbase
   apt_key:
-  keyserver: "{{ rbase_keyserver }}"
-  id: "{{ rbase_id }}"
-  state: present
+    keyserver: "{{ rbase_keyserver }}"
+    id: "{{ rbase_id }}"
+    state: present
+  become: true
 
 - name: Add repo Rbase
   apt_repository:
-  repo: "{{ rbase_repo }}"
-  state: present
+    repo: "{{ rbase_repo }}"
+    state: present
+  become: true
 
+- name: Update cache apt
+  apt:
+    update_cache: True
+  become: True
 
 # RStudio
 - name: Download Rstudio package

@@ -6,10 +6,10 @@
     - { role: python, tags: ['desktop'] }
     - { role: fun, tags: ['desktop'] }
     - { role: image, tags: ['desktop'] }
-    - { role: audio, tags: ['desktop', 'test'] }
+    - { role: audio, tags: ['desktop'] }
     - { role: video, tags: ['desktop'] }
     - { role: editor, tags: ['desktop'] }
     - { role: virtualbox, tags: ['desktop']}
-    - { role: r, tags: ['desktop']}
+    - { role: r, tags: ['desktop', 'test']}
     - { role: java, tags: ['desktop']}
 #    - { role: localhost, tags: ['localhost']}

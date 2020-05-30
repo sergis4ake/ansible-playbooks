@@ -7,7 +7,7 @@ packages:
   - code
 
 vscode_url: 'https://go.microsoft.com/fwlink/?LinkID=760868'
-vscode_file: '/tmp/vscode.deb'
+vscode_file: 'vscode.deb'
 vscode_enable_extensions: true
 vscode_extensions:
   - monokai.theme-monokai-pro-vscode

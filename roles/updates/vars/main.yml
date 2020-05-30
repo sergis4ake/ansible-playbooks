@@ -1,0 +1,24 @@
+---
+
+packages:
+# Some dependencies packages
+  - firmware-atheros
+  - lib32gcc1
+  - lib32stdc++6
+  - libc6-i386 
+  - libclang-7-dev 
+  - libclang-common-7-dev 
+  - libclang-dev 
+  - libclang1-7 
+  - libobjc-8-dev
+  - libobjc4
+  - libclang-dev
+  - gconf-service 
+  - gconf2-common
+  - libappindicator1 
+  - libc++1
+  - libc++1-7
+  - libc++abi1-7
+  - libdbusmenu-gtk4
+  - libgconf-2-4
+  - libindicator7

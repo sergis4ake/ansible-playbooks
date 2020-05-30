@@ -1,11 +1,11 @@
 ---
 
 rbase_keyserver: keys.gnupg.net
-rbase_id: 381BA480
+rbase_id: E19F5F87128899B192B1A2C2AD5F960A256A04AF
 rbase_repo: "deb http://cloud.r-project.org/bin/linux/debian buster-cran40/"
 
 rstudio_url: 'https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5042-amd64.deb'
-rstudio_file: /tmp/rstudio.deb
+rstudio_file: rstudio.deb
 rstudio_enable_packages: true
 rstudio_packages:
   - ggplot
@@ -15,6 +15,6 @@ rstudio_packages:
   - tidyverse
 
 packages:
-  - r-base
+  - r-base-core
   - r-base-dev
   - rstudio

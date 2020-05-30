@@ -9,3 +9,4 @@ repo_spotify: 'deb http://repository.spotify.com stable non-free'
 packages:
   - spotify-client
   - discord
+  - pulseaudio

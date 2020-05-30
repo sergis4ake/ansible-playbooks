@@ -23,7 +23,6 @@ packages:
   - mtr
   - rsync
   - rclone
-  - smartgit
   - tmux
   - tree
   - undistract-me         #Notifies you when long-running terminal commands complete.
@@ -37,6 +36,10 @@ packages:
   - lnav                  #Registros
   - ncdu
   - ranger
+  - laptop-mode-tools
+  - ufw
+  - gnome-tweak-tool
+  - glances
 
 #  - bmon
 #  - byobu #For remove-old-kernels
