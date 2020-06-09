@@ -5,4 +5,4 @@
 java_packages:
   - openjdk-11-jdk
 
-java_home: "$HOME/.java/jdk-10.0.2"
+java_home: "/usr/lib/jvm/java-11-openjdk-amd64"
